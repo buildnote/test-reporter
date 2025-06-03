@@ -11444,7 +11444,6 @@ function getVersion() {
 function getPlatform() {
     const platforms = {
         'linux-x64': 'linux-x64',
-        // 'linux-arm64': 'linux-arm64',
         'darwin-x64': 'darwin-x64',
         'darwin-arm64': 'darwin-arm64',
         'win32-x64': 'windows-x64',
@@ -11521,41 +11520,12 @@ const main_main = () => __awaiter(void 0, void 0, void 0, function* () {
     runAction();
 });
 const runAction = () => __awaiter(void 0, void 0, void 0, function* () {
-    const supportedCommands = ["collect", "submit", "report", "version"];
     yield installCli((0,main.getInput)('version'));
-    const installOnly = (0,main.getBooleanInput)("installOnly");
-    if (installOnly) {
-        core.info("Installed only");
-    }
-    if (installOnly)
-        return;
-    const command = (0,main.getInput)('command');
     const verbose = (0,main.getBooleanInput)('verbose', { required: false }) || false;
     const args = (0,main.getMultilineInput)('args');
-    if (supportedCommands.indexOf(command) < 0) {
-        core.error(`Invalid command '${command}'. Supported commands are [${supportedCommands.join(", ")}]`);
-        return;
-    }
     const fileName = '.buildnote-cli-args';
     try {
-        let options;
-        switch (command) {
-            case "submit":
-                options = [];
-                break;
-            case "collect":
-                options = [];
-                break;
-            case "report":
-                options = [];
-                break;
-            case "version":
-                options = [];
-                break;
-            default:
-                return;
-        }
-        const fullCommand = (verbose ? ["--verbose"] : []).concat([command, ...options, ...args]);
+        const fullCommand = (verbose ? ["--verbose"] : []).concat(["report", ...args]);
         const fullCommandFileContent = fullCommand.join(" ").trim();
         core.info(`Running buildnote ${fullCommandFileContent}`);
         external_fs_.writeFileSync(fileName, fullCommandFileContent);

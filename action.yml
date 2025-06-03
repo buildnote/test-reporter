@@ -1,0 +1,21 @@
+name: 'Buildnote Test Reporter Action'
+description: 'Action wrapping Buildnote CLI to produce test reports'
+author: 'Buildnote'
+branding:
+  icon: 'code'
+  color: 'purple'
+inputs:
+  version:
+    description: 'Version of Buildnote CLI to use'
+    required: false
+    default: '0.0.16'
+  args:
+    description: 'Additional command arguments'
+    required: false
+  verbose:
+    description: 'Runs buildnote CLI in verbose mode'
+    required: false
+    default: 'false'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

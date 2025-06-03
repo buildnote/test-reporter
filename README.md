@@ -2,8 +2,8 @@
 
 This action collects tests results in your build and reports them as step summary.
 
-[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Buildnote%20Action-blue.svg?colorA=24292e&colorB=0366d6&style=flat&longCache=true&logo=github)](https://github.com/marketplace/actions/buildnote-action)
-[![Release Buildnote Test Reporter Action](https://github.com/buildnote/action/actions/workflows/release.yml/badge.svg)](https://github.com/buildnote/action/actions/workflows/release.yml)
+[![GitHub Marketplace](https://img.shields.io/badge/Marketplace-Buildnote%20Test%20Reporter%20Action-blue.svg?colorA=24292e&colorB=0366d6&style=flat&longCache=true&logo=github)](https://github.com/marketplace/actions/buildnote-test-reporter-action)
+[![Release Buildnote Test Reporter Action](https://github.com/buildnote/action/actions/workflows/release.yml/badge.svg)](https://github.com/buildnote/test-reporter/actions/workflows/release.yml)
 
 ## What does this action do?
 

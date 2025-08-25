@@ -11,7 +11,7 @@ jobs:
   update-dist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v5.0.0
         with:
           token: ${{ secrets.BUILDNOTE_ACTION_RELEASE_PAT }}
       - uses: actions/setup-node@v4
@@ -20,7 +20,7 @@ jobs:
           cache: yarn
       - run: yarn install
       - run: yarn build
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - uses: stefanzweifel/git-auto-commit-action@v6
         with:
           file_pattern: dist/**
           add_options: -u --force

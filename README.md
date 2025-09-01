@@ -7,7 +7,7 @@ This action collects tests results in your build and reports them as step summar
 
 ## What does this action do?
 
-The Buildnote Test Reporter GitHub Action provides a wrapper around the [Buildnote CLI](https://buildnote.io/docs/cli/), allowing you
+The Buildnote Test Reporter GitHub Action provides a wrapper around the [Buildnote CLI](https://docs.buildnote.io/reference/cli/download/), allowing you
 to:
 
 - Collect test results in various formats

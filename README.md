@@ -43,7 +43,7 @@ jobs:
 
 | Input         | Description                               | Required | Default |
 |---------------|-------------------------------------------|----------|---------|
-| `version`     | Version of Buildnote CLI to use           | No       | 1.1.0  |
+| `version`     | Version of Buildnote CLI to use           | No       | latest  |
 | `args`        | Additional command arguments              | No       |         |
 | `verbose`     | Runs Buildnote CLI in verbose mode        | No       | false   |
 
